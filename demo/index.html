@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ableton-web-components — playground</title>
+    <meta
+      name="description"
+      content="Interactive playground for ableton-web-components: high-fidelity Ableton Live-style web components."
+    />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--able-surface-area);
+        color: var(--able-text-color);
+        font-family: var(--able-font-family);
+        padding: 32px 24px 64px;
+        line-height: 1.5;
+      }
+      .wrap { max-width: 860px; margin: 0 auto; }
+      header h1 { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+      header p { color: var(--able-text-disabled); font-size: 13px; margin: 0; }
+      header a { color: var(--able-chosen-default, #00a8c6); }
+      .theme-picker {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        margin-top: 28px;
+      }
+      .theme-picker label {
+        font-size: 11px;
+        color: var(--able-text-disabled);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .theme-picker select {
+        background: var(--able-surface-area);
+        color: var(--able-text-color);
+        border: 1px solid var(--able-control-contrast-frame);
+        border-radius: 3px;
+        padding: 5px 7px;
+        font-family: inherit;
+        font-size: 12px;
+        min-width: 200px;
+      }
+      h2 {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--able-text-disabled);
+        margin: 32px 0 12px;
+      }
+      .panel {
+        padding: 20px;
+        background: var(--able-detail-view-background);
+        border: 1px solid var(--able-control-contrast-frame);
+        border-radius: var(--able-control-radius);
+      }
+      .stage {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 32px;
+        min-height: 120px;
+        padding: 16px 0 24px;
+      }
+      .controls {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 14px 24px;
+        border-top: 1px solid var(--able-control-contrast-frame);
+        padding-top: 18px;
+      }
+      .field { display: flex; flex-direction: column; gap: 5px; }
+      .field label {
+        font-size: 11px;
+        color: var(--able-text-disabled);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .field input[type='text'],
+      .field input[type='number'],
+      .field select {
+        background: var(--able-surface-area);
+        color: var(--able-text-color);
+        border: 1px solid var(--able-control-contrast-frame);
+        border-radius: 3px;
+        padding: 5px 7px;
+        font-family: inherit;
+        font-size: 12px;
+      }
+      .checks { display: flex; flex-wrap: wrap; gap: 14px; }
+      .checks label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--able-text-color);
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .readout {
+        margin-top: 14px;
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        color: var(--able-text-disabled);
+      }
+      .readout b { color: var(--able-text-color); }
+      pre.code {
+        background: var(--able-surface-area);
+        border: 1px solid var(--able-control-contrast-frame);
+        border-radius: 4px;
+        padding: 12px 14px;
+        font-size: 12px;
+        overflow-x: auto;
+        margin: 10px 0 0;
+        white-space: pre;
+        color: var(--able-text-color);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        align-items: center;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 12px;
+        color: var(--able-text-disabled);
+      }
+      footer a { color: var(--able-chosen-default, #00a8c6); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <h1>ableton-web-components</h1>
+          <p>
+            High-fidelity, framework-agnostic Ableton Live-style controls. Drag a dial below, then tweak
+            its attributes live. &nbsp;<a href="https://github.com/ben-juodvalkis/ableton-web-components"
+              >GitHub →</a
+            >
+          </p>
+        </div>
+      </header>
+
+      <div class="theme-picker">
+        <label for="c-theme">Live theme</label>
+        <select id="c-theme"></select>
+      </div>
+
+      <h2>Playground — &lt;able-dial&gt;</h2>
+      <div class="panel">
+        <div class="stage">
+          <able-dial id="play" label="live.dial" value="64" min="0" max="127" decimals="0"></able-dial>
+        </div>
+
+        <div class="controls">
+          <div class="field">
+            <label for="c-type">type</label>
+            <select id="c-type">
+              <option value="large" selected>large</option>
+              <option value="vertical">vertical</option>
+              <option value="tiny">tiny</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-label">label</label>
+            <input id="c-label" type="text" value="live.dial" />
+          </div>
+          <div class="field">
+            <label for="c-unit">unit</label>
+            <input id="c-unit" type="text" value="" placeholder="dB, %, ct…" />
+          </div>
+          <div class="field">
+            <label for="c-min">min</label>
+            <input id="c-min" type="number" value="0" />
+          </div>
+          <div class="field">
+            <label for="c-max">max</label>
+            <input id="c-max" type="number" value="127" />
+          </div>
+          <div class="field">
+            <label for="c-default">default (dbl-click)</label>
+            <input id="c-default" type="number" value="0" />
+          </div>
+          <div class="field">
+            <label for="c-decimals">decimals</label>
+            <input id="c-decimals" type="number" value="0" min="0" max="6" />
+          </div>
+          <div class="field">
+            <label for="c-accent">accent</label>
+            <input id="c-accent" type="text" value="" placeholder="any CSS color" />
+          </div>
+          <div class="field" style="grid-column: 1 / -1">
+            <label>flags</label>
+            <div class="checks">
+              <label><input id="c-triangle" type="checkbox" /> triangle</label>
+              <label><input id="c-bipolar" type="checkbox" /> bipolar</label>
+              <label><input id="c-hide-name" type="checkbox" /> hide-name</label>
+              <label><input id="c-hide-value" type="checkbox" /> hide-value</label>
+              <label><input id="c-disabled" type="checkbox" /> disabled</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="readout">
+          <span>input: <b id="r-input">64</b></span> &nbsp;·&nbsp;
+          <span>last change: <b id="r-change">—</b></span>
+        </div>
+
+        <pre class="code" id="snippet"></pre>
+      </div>
+
+      <h2>Gallery — every form factor</h2>
+      <div class="panel">
+        <div class="row">
+          <able-dial label="live.dial" value="82" decimals="0" triangle></able-dial>
+          <able-dial label="Gain" value="-6" min="-70" max="6" default="0" unit="dB" decimals="1"></able-dial>
+          <able-dial label="Pan" value="-32" min="-64" max="63" default="0" decimals="0" bipolar></able-dial>
+          <able-dial type="vertical" label="live.dial" value="54" decimals="0" triangle></able-dial>
+          <able-dial type="tiny" label="live.dial" value="93" decimals="0" triangle></able-dial>
+          <able-dial label="Off" value="50" decimals="0" disabled></able-dial>
+        </div>
+      </div>
+
+      <footer>
+        Launching with the dial — sliders, toggles, value boxes, dropdowns, XY pads, meters &amp; envelope
+        editors are on the
+        <a href="https://github.com/ben-juodvalkis/ableton-web-components#roadmap">roadmap</a>. Not affiliated
+        with Ableton AG.
+      </footer>
+    </div>
+
+    <script type="module">
+      // Import the theme tokens directly so Vite injects them as a <style> in the build
+      // (the side-effect import inside index.ts isn't auto-injected in this demo bundle).
+      import '../src/theme.css';
+      import { AbleDial } from '../src/index.ts';
+      // Register explicitly — referencing the class alone gets tree-shaken in prod builds,
+      // and this is idempotent if the @customElement decorator already ran.
+      if (!customElements.get('able-dial')) customElements.define('able-dial', AbleDial);
+
+      const dial = document.getElementById('play');
+      const $ = (id) => document.getElementById(id);
+
+      // --- Live theme picker -------------------------------------------------
+      // themes.json is generated by scripts/build-themes.mjs from the stock
+      // Live .ask files (only the colour values our theme.css already maps).
+      const themeSel = $('c-theme');
+
+      // Relative luminance of a #rgb/#rrggbb[aa] colour (0=black, 1=white).
+      function luminance(hex) {
+        const h = hex.replace('#', '');
+        const n = h.length >= 6 ? h : h.replace(/(.)/g, '$1$1');
+        const [r, g, b] = [0, 2, 4].map((i) => parseInt(n.slice(i, i + 2), 16) / 255);
+        return 0.2126 * r + 0.7152 * g + 0.587 * b;
+      }
+
+      function applyTheme(theme) {
+        const root = document.documentElement;
+        // Clear any vars from a previous theme so partial sets don't bleed over.
+        for (const v of root.style) {
+          if (v.startsWith('--able-')) root.style.removeProperty(v);
+        }
+        for (const [name, value] of Object.entries(theme.vars)) {
+          root.style.setProperty(name, value);
+        }
+        // theme.css aliases --able-text-color to --able-control-foreground, but
+        // an inline override needs to be set explicitly to win the cascade.
+        const fg = theme.vars['--able-control-foreground'];
+        if (fg) root.style.setProperty('--able-text-color', fg);
+        // The dial needle isn't an .ask colour — pick dark/light for contrast
+        // against the control foreground (the dial's filled indicator).
+        if (fg) {
+          root.style.setProperty(
+            '--able-dial-needle',
+            luminance(fg) > 0.5 ? '#181818' : '#e8e8e8',
+          );
+        }
+      }
+
+      fetch('./themes.json')
+        .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        .then((themes) => {
+          for (const t of themes) {
+            const opt = document.createElement('option');
+            opt.value = opt.textContent = t.name;
+            themeSel.appendChild(opt);
+          }
+          const DEFAULT = 'Default Dark Cool Medium';
+          const start = themes.find((t) => t.name === DEFAULT) ?? themes[0];
+          if (start) {
+            themeSel.value = start.name;
+            applyTheme(start);
+          }
+          themeSel.addEventListener('change', () => {
+            const t = themes.find((x) => x.name === themeSel.value);
+            if (t) applyTheme(t);
+          });
+        })
+        .catch(() => {
+          // No themes.json (e.g. build skipped) — hide the picker gracefully.
+          themeSel.closest('.theme-picker').style.display = 'none';
+        });
+
+      const attrControls = {
+        label: 'c-label',
+        unit: 'c-unit',
+        min: 'c-min',
+        max: 'c-max',
+        default: 'c-default',
+        decimals: 'c-decimals',
+        accent: 'c-accent',
+      };
+      const flagControls = {
+        triangle: 'c-triangle',
+        bipolar: 'c-bipolar',
+        'hide-name': 'c-hide-name',
+        'hide-value': 'c-hide-value',
+        disabled: 'c-disabled',
+      };
+
+      function apply() {
+        dial.type = $('c-type').value;
+        for (const [attr, id] of Object.entries(attrControls)) {
+          const v = $(id).value;
+          if (v === '') dial.removeAttribute(attr);
+          else dial.setAttribute(attr, v);
+        }
+        for (const [attr, id] of Object.entries(flagControls)) {
+          if ($(id).checked) dial.setAttribute(attr, '');
+          else dial.removeAttribute(attr);
+        }
+        renderSnippet();
+      }
+
+      function renderSnippet() {
+        const parts = ['able-dial'];
+        const type = dial.type ?? $('c-type').value;
+        if (type !== 'large') parts.push(`type="${type}"`);
+        // dial.value is undefined until the custom element upgrades — fall back to the attribute.
+        const raw = dial.value ?? Number(dial.getAttribute('value')) ?? 0;
+        const val = Number.isFinite(raw) ? Math.round(raw) : 0;
+        parts.push(`value="${val}"`);
+        for (const attr of ['label', 'min', 'max', 'default', 'unit', 'decimals', 'accent']) {
+          const v = $(attrControls[attr])?.value;
+          if (v) parts.push(`${attr}="${v}"`);
+        }
+        for (const attr of Object.keys(flagControls)) {
+          if ($(flagControls[attr]).checked) parts.push(attr);
+        }
+        $('snippet').textContent = `<${parts.join(' ')}></able-dial>`;
+      }
+
+      for (const id of [...Object.values(attrControls), 'c-type']) {
+        $(id).addEventListener('input', apply);
+        $(id).addEventListener('change', apply);
+      }
+      for (const id of Object.values(flagControls)) {
+        $(id).addEventListener('change', apply);
+      }
+
+      dial.addEventListener('input', (e) => {
+        $('r-input').textContent = e.detail.value.toFixed(Number($('c-decimals').value) || 0);
+        renderSnippet();
+      });
+      dial.addEventListener('change', (e) => {
+        $('r-change').textContent = e.detail.value.toFixed(Number($('c-decimals').value) || 0);
+      });
+
+      // Wait for the custom element to upgrade before the first sync, so dial.value is real.
+      customElements.whenDefined('able-dial').then(apply);
+      apply(); // also run immediately so the snippet/readout aren't blank pre-upgrade
+    </script>
+  </body>
+</html>

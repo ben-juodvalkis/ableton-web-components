@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Angst Robot",
+    "vars": {
+      "--able-surface-area": "#221746",
+      "--able-control-background": "#1a1037",
+      "--able-control-foreground": "#e5e6e8",
+      "--able-control-on-foreground": "#000001",
+      "--able-control-contrast-frame": "#060313",
+      "--able-control-fill-handle": "#647cbc",
+      "--able-detail-view-background": "#3f357d",
+      "--able-display-background": "#100826",
+      "--able-chosen-default": "#b5ff63",
+      "--able-range-default": "#ffc421",
+      "--able-modulation": "#00baed",
+      "--able-automation-color": "#4fecbf",
+      "--able-selection-background": "#79c9ff",
+      "--able-selection-foreground": "#000001",
+      "--able-control-selection-frame": "#d2d7df",
+      "--able-text-disabled": "#acbad3"
+    }
+  },
+  {
+    "name": "Classic Medium Dark",
+    "vars": {
+      "--able-surface-area": "#2a2a2a",
+      "--able-control-background": "#424242",
+      "--able-control-foreground": "#e0e0e0",
+      "--able-control-on-foreground": "#080808",
+      "--able-control-contrast-frame": "#151515",
+      "--able-control-fill-handle": "#878787",
+      "--able-detail-view-background": "#686868",
+      "--able-display-background": "#1f1f1f",
+      "--able-chosen-default": "#ff9c39",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#96d4e8",
+      "--able-selection-foreground": "#080808",
+      "--able-control-selection-frame": "#c6c6c6",
+      "--able-text-disabled": "#a7a7a7"
+    }
+  },
+  {
+    "name": "Classic Medium Light",
+    "vars": {
+      "--able-surface-area": "#565656",
+      "--able-control-background": "#c6c6c6",
+      "--able-control-foreground": "#000000",
+      "--able-control-on-foreground": "#000000",
+      "--able-control-contrast-frame": "#383838",
+      "--able-control-fill-handle": "#c6c6c6",
+      "--able-detail-view-background": "#afafaf",
+      "--able-display-background": "#424242",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#000000",
+      "--able-control-selection-frame": "#383838",
+      "--able-text-disabled": "#565656"
+    }
+  },
+  {
+    "name": "Default Dark Cool High",
+    "vars": {
+      "--able-surface-area": "#1b1d25",
+      "--able-control-background": "#14161e",
+      "--able-control-foreground": "#d7d8e1",
+      "--able-control-on-foreground": "#020305",
+      "--able-control-contrast-frame": "#07090e",
+      "--able-control-fill-handle": "#6d707c",
+      "--able-detail-view-background": "#3d3f4b",
+      "--able-display-background": "#0d0f16",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#020305",
+      "--able-control-selection-frame": "#b5b6c2",
+      "--able-text-disabled": "#9294a0"
+    }
+  },
+  {
+    "name": "Default Dark Cool Medium",
+    "vars": {
+      "--able-surface-area": "#22242d",
+      "--able-control-background": "#1c1e26",
+      "--able-control-foreground": "#b3b4bd",
+      "--able-control-on-foreground": "#06060a",
+      "--able-control-contrast-frame": "#0f1117",
+      "--able-control-fill-handle": "#5a5c68",
+      "--able-detail-view-background": "#3b3d48",
+      "--able-display-background": "#16181f",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#06060a",
+      "--able-control-selection-frame": "#8f909c",
+      "--able-text-disabled": "#737581"
+    }
+  },
+  {
+    "name": "Default Dark Neutral High",
+    "vars": {
+      "--able-surface-area": "#1d1d1d",
+      "--able-control-background": "#161616",
+      "--able-control-foreground": "#d8d8d8",
+      "--able-control-on-foreground": "#030303",
+      "--able-control-contrast-frame": "#090909",
+      "--able-control-fill-handle": "#707070",
+      "--able-detail-view-background": "#404040",
+      "--able-display-background": "#0f0f0f",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#030303",
+      "--able-control-selection-frame": "#b7b7b7",
+      "--able-text-disabled": "#949494"
+    }
+  },
+  {
+    "name": "Default Dark Neutral Medium",
+    "vars": {
+      "--able-surface-area": "#242424",
+      "--able-control-background": "#1e1e1e",
+      "--able-control-foreground": "#b5b5b5",
+      "--able-control-on-foreground": "#070707",
+      "--able-control-contrast-frame": "#111111",
+      "--able-control-fill-handle": "#5d5d5d",
+      "--able-detail-view-background": "#3e3e3e",
+      "--able-display-background": "#181818",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#070707",
+      "--able-control-selection-frame": "#919191",
+      "--able-text-disabled": "#757575"
+    }
+  },
+  {
+    "name": "Default Dark Warm High",
+    "vars": {
+      "--able-surface-area": "#221c17",
+      "--able-control-background": "#1b1511",
+      "--able-control-foreground": "#e2d7c7",
+      "--able-control-on-foreground": "#040202",
+      "--able-control-contrast-frame": "#0c0806",
+      "--able-control-fill-handle": "#7b6e60",
+      "--able-detail-view-background": "#483e35",
+      "--able-display-background": "#130e0b",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#040202",
+      "--able-control-selection-frame": "#c3b5a3",
+      "--able-text-disabled": "#a09281"
+    }
+  },
+  {
+    "name": "Default Dark Warm Medium",
+    "vars": {
+      "--able-surface-area": "#29231f",
+      "--able-control-background": "#231d1a",
+      "--able-control-foreground": "#beb3a5",
+      "--able-control-on-foreground": "#080605",
+      "--able-control-contrast-frame": "#14100d",
+      "--able-control-fill-handle": "#645b53",
+      "--able-detail-view-background": "#443c36",
+      "--able-display-background": "#1c1714",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#b0ddeb",
+      "--able-selection-foreground": "#080605",
+      "--able-control-selection-frame": "#9b8f82",
+      "--able-text-disabled": "#7e7469"
+    }
+  },
+  {
+    "name": "Default Light Cool High",
+    "vars": {
+      "--able-surface-area": "#575b67",
+      "--able-control-background": "#d4d6dc",
+      "--able-control-foreground": "#020308",
+      "--able-control-on-foreground": "#020308",
+      "--able-control-contrast-frame": "#313541",
+      "--able-control-fill-handle": "#d4d6dc",
+      "--able-detail-view-background": "#cbced4",
+      "--able-display-background": "#3f434f",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#020308",
+      "--able-control-selection-frame": "#313541",
+      "--able-text-disabled": "#575b67"
+    }
+  },
+  {
+    "name": "Default Light Cool Medium",
+    "vars": {
+      "--able-surface-area": "#696e7a",
+      "--able-control-background": "#cdcfd5",
+      "--able-control-foreground": "#0f121a",
+      "--able-control-on-foreground": "#0f121a",
+      "--able-control-contrast-frame": "#4b4f5c",
+      "--able-control-fill-handle": "#cdcfd5",
+      "--able-detail-view-background": "#c4c6cd",
+      "--able-display-background": "#575b67",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#0f121a",
+      "--able-control-selection-frame": "#4b4f5c",
+      "--able-text-disabled": "#696e7a"
+    }
+  },
+  {
+    "name": "Default Light Neutral High",
+    "vars": {
+      "--able-surface-area": "#5b5b5b",
+      "--able-control-background": "#d6d6d6",
+      "--able-control-foreground": "#030303",
+      "--able-control-on-foreground": "#030303",
+      "--able-control-contrast-frame": "#353535",
+      "--able-control-fill-handle": "#d6d6d6",
+      "--able-detail-view-background": "#cecece",
+      "--able-display-background": "#434343",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#030303",
+      "--able-control-selection-frame": "#353535",
+      "--able-text-disabled": "#5b5b5b"
+    }
+  },
+  {
+    "name": "Default Light Neutral Medium",
+    "vars": {
+      "--able-surface-area": "#6e6e6e",
+      "--able-control-background": "#cfcfcf",
+      "--able-control-foreground": "#121212",
+      "--able-control-on-foreground": "#121212",
+      "--able-control-contrast-frame": "#4f4f4f",
+      "--able-control-fill-handle": "#cfcfcf",
+      "--able-detail-view-background": "#c6c6c6",
+      "--able-display-background": "#5b5b5b",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#121212",
+      "--able-control-selection-frame": "#4f4f4f",
+      "--able-text-disabled": "#6e6e6e"
+    }
+  },
+  {
+    "name": "Default Light Warm High",
+    "vars": {
+      "--able-surface-area": "#65594f",
+      "--able-control-background": "#dcd5d0",
+      "--able-control-foreground": "#060200",
+      "--able-control-on-foreground": "#060200",
+      "--able-control-contrast-frame": "#3e3328",
+      "--able-control-fill-handle": "#dcd5d0",
+      "--able-detail-view-background": "#d4ccc7",
+      "--able-display-background": "#4c4137",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#060200",
+      "--able-control-selection-frame": "#3e3328",
+      "--able-text-disabled": "#65594f"
+    }
+  },
+  {
+    "name": "Default Light Warm Medium",
+    "vars": {
+      "--able-surface-area": "#776b61",
+      "--able-control-background": "#d4cdc9",
+      "--able-control-foreground": "#18110a",
+      "--able-control-on-foreground": "#18110a",
+      "--able-control-contrast-frame": "#594d42",
+      "--able-control-fill-handle": "#d4cdc9",
+      "--able-detail-view-background": "#ccc4bf",
+      "--able-display-background": "#65594e",
+      "--able-chosen-default": "#ffb901",
+      "--able-range-default": "#00eeff",
+      "--able-modulation": "#008cad",
+      "--able-automation-color": "#ea3c3c",
+      "--able-selection-background": "#cdf8ff",
+      "--able-selection-foreground": "#18110a",
+      "--able-control-selection-frame": "#594d42",
+      "--able-text-disabled": "#776b61"
+    }
+  },
+  {
+    "name": "Immaterial",
+    "vars": {
+      "--able-surface-area": "#1d1f23",
+      "--able-control-background": "#18191e",
+      "--able-control-foreground": "#cbcbcd",
+      "--able-control-on-foreground": "#040506",
+      "--able-control-contrast-frame": "#0c0d10",
+      "--able-control-fill-handle": "#5c6069",
+      "--able-detail-view-background": "#373a41",
+      "--able-display-background": "#121417",
+      "--able-chosen-default": "#ff91c3",
+      "--able-range-default": "#47e2f4",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff91c3",
+      "--able-selection-background": "#bbdbe3",
+      "--able-selection-foreground": "#040506",
+      "--able-control-selection-frame": "#a1a3a9",
+      "--able-text-disabled": "#7d8088"
+    }
+  },
+  {
+    "name": "Riparian",
+    "vars": {
+      "--able-surface-area": "#0f2026",
+      "--able-control-background": "#08191f",
+      "--able-control-foreground": "#d6cda8",
+      "--able-control-on-foreground": "#000102",
+      "--able-control-contrast-frame": "#000a0f",
+      "--able-control-fill-handle": "#607175",
+      "--able-detail-view-background": "#31434a",
+      "--able-display-background": "#031117",
+      "--able-chosen-default": "#ffc658",
+      "--able-range-default": "#00ccb7",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff574f",
+      "--able-selection-background": "#b4eccd",
+      "--able-selection-foreground": "#000102",
+      "--able-control-selection-frame": "#b0b5a3",
+      "--able-text-disabled": "#82918f"
+    }
+  },
+  {
+    "name": "Twenty-Four Carat",
+    "vars": {
+      "--able-surface-area": "#222222",
+      "--able-control-background": "#1b1b1b",
+      "--able-control-foreground": "#e1c69c",
+      "--able-control-on-foreground": "#040404",
+      "--able-control-contrast-frame": "#0d0d0d",
+      "--able-control-fill-handle": "#63605a",
+      "--able-detail-view-background": "#3d3d3c",
+      "--able-display-background": "#141414",
+      "--able-chosen-default": "#ffad56",
+      "--able-range-default": "#03c3d5",
+      "--able-modulation": "#009aac",
+      "--able-automation-color": "#ff4d47",
+      "--able-selection-background": "#ffdd9f",
+      "--able-selection-foreground": "#040404",
+      "--able-control-selection-frame": "#c9ab7c",
+      "--able-text-disabled": "#8c7f6c"
+    }
+  }
+]

@@ -1,0 +1,82 @@
+/*
+ * ableton-web-components — theme tokens
+ *
+ * These CSS custom properties mirror the named colors in Ableton Live's
+ * `.ask` (Ableton Skin) theme files. Each `--able-<key>` maps 1:1 to the
+ * corresponding `<Key>` in a `.ask` file, so an Ableton Extension can read the
+ * host's active theme and override these at runtime — components then match
+ * whatever skin the user is running.
+ *
+ * The default values below are transcribed from the colour VALUES in the stock
+ * Live 12 themes ("Default Dark/Light Cool Medium"). Only individual colour
+ * facts are used; NO Ableton binary assets, fonts, or theme files are
+ * redistributed, and all control geometry is original (see docs/FIDELITY.md).
+ *
+ * Apply `.able-theme` (or set these vars on :root) to opt in.
+ */
+
+:root,
+.able-theme {
+  /* --- Surfaces (.ask keys) --- */
+  --able-surface-area: #22242d;          /* SurfaceArea */
+  --able-control-background: #1c1e26;     /* ControlBackground */
+  --able-control-foreground: #b3b4bd;     /* ControlForeground — dial indicator */
+  --able-control-on-foreground: #06060a;  /* ControlOnForeground */
+  --able-control-contrast-frame: #0f1117; /* ControlContrastFrame */
+  --able-control-fill-handle: #5a5c68;    /* ControlFillHandle — unfilled track */
+  --able-detail-view-background: #3b3d48; /* DetailViewBackground */
+  --able-display-background: #16181f;     /* DisplayBackground */
+
+  /* --- Accent / value arc --- */
+  --able-chosen-default: #ffad56;         /* ChosenDefault — the orange value arc */
+  --able-range-default: #03c3d5;          /* RangeDefault — cyan range/send fill */
+  --able-modulation: #009aac;             /* Modulation */
+  --able-automation-color: #ff4d47;       /* AutomationColor */
+
+  /* --- Selection --- */
+  --able-selection-background: #b0ddeb;   /* SelectionBackground */
+  --able-selection-foreground: #06060a;   /* SelectionForeground */
+  --able-control-selection-frame: #8f909c;/* ControlSelectionFrame */
+
+  /* --- Text --- */
+  --able-text-color: var(--able-control-foreground);
+  --able-text-disabled: #737581;          /* TextDisabled */
+
+  /* --- Semantic aliases (stable names components reference) --- */
+  --able-control-filled: var(--able-chosen-default);
+  --able-control-track: var(--able-control-fill-handle);
+  --able-dial-needle: #181818;            /* live_dial_needle — dark clock-hand */
+
+  /* --- Typography (Live uses a compact UI sans; default to system stack) --- */
+  --able-font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --able-font-size: 9.5px;
+
+  /* --- Geometry shared by rotary controls (measured from a real live.dial) ---
+   * Screen degrees: 0=right, 90=bottom, 180=left, 270=top.
+   * Gap ~60deg centered at the bottom -> 300deg sweep starting lower-left. */
+  --able-dial-arc-start: 119deg;
+  --able-dial-arc-sweep: 300deg;
+  --able-control-radius: 2px;
+}
+
+/* Light theme override — opt in with `.able-theme-light`.
+ * Values from the stock "Default Light Cool Medium" theme. */
+.able-theme-light {
+  --able-surface-area: #696e7a;
+  --able-control-background: #cdcfd5;
+  --able-control-foreground: #0f121a;
+  --able-control-on-foreground: #0f121a;
+  --able-control-contrast-frame: #4b4f5c;
+  --able-control-fill-handle: #a9abb3;
+  --able-detail-view-background: #c4c6cd;
+  --able-display-background: #575b67;
+
+  --able-chosen-default: #ffb901;
+  --able-range-default: #007383;
+  --able-selection-background: #cdf8ff;
+  --able-selection-foreground: #0f121a;
+  --able-control-selection-frame: #4b4f5c;
+
+  --able-text-disabled: #696e7a;
+  --able-dial-needle: #0f121a;
+}

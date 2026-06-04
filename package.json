@@ -1,0 +1,73 @@
+{
+  "name": "ableton-web-components",
+  "version": "0.1.0",
+  "description": "High-fidelity, framework-agnostic web components that look and behave like native Ableton Live controls — for building Ableton Extensions and Live-themed web UIs.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://ben-juodvalkis.github.io/ableton-web-components/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-juodvalkis/ableton-web-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ben-juodvalkis/ableton-web-components/issues"
+  },
+  "keywords": [
+    "ableton",
+    "ableton-live",
+    "extensions",
+    "web-components",
+    "lit",
+    "custom-elements",
+    "knob",
+    "dial",
+    "slider",
+    "ui"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme.css": "./dist/ableton-web-components.css"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.stories.ts"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "sideEffects": [
+    "**/*.css",
+    "./src/index.ts",
+    "./src/components/**/*.ts",
+    "./dist/index.js",
+    "./dist/components/**/*.js"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf dist && vite build && tsc",
+    "dev:demo": "vite --config vite.demo.config.ts",
+    "build:themes": "node scripts/build-themes.mjs",
+    "build:demo": "npm run build:themes && vite build --config vite.demo.config.ts",
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "@storybook/web-components-vite": "^8.6.0",
+    "storybook": "^8.6.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}

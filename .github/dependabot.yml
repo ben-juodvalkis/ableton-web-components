@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # Keep SHA-pinned GitHub Actions current. Dependabot understands SHA pins and
+  # bumps both the commit SHA and the trailing `# vX.Y.Z` version comment.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci
+
+  # npm dependencies (lit + dev tooling). Group minor/patch bumps into one PR
+  # to cut noise; majors come through individually so they get a closer look.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: deps
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch

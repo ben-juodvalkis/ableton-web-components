@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="442" height="122" viewBox="0 0 442 122" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="441" height="121" rx="2" fill="#3b3d48" stroke="#0f1117"/>
+  
+    <text x="44.00" y="28.00" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">live.dial</text>
+    <svg x="18.00" y="33.00" width="52" height="53.742" viewBox="0 -1.7421039999999985 52 53.742104" opacity="1" overflow="visible"><path d="M 19.6352 -1.7421039999999985 L 32.3648 -1.7421039999999985 L 26 4.622696000000001 Z" fill="#03c3d5"/><path fill="none" stroke="#181818" d="M 40.80664984537205 14.545676783129265 A 18.72 18.72 0 0 1 35.64151276231622 42.046171869143535" stroke-width="3.12624"/><path fill="none" stroke="#03c3d5" d="M 16.92436390898857 42.37288091764949 A 18.72 18.72 0 1 1 37.2990533667969 11.0745253672027" stroke-width="3.12624"/><line stroke="#181818" stroke-linecap="round" x1="28.53906761720117" y1="23.248514649270255" x2="38.73977176930686" y2="12.194422252713508" stroke-width="2.9952"/></svg>
+    <text x="44.00" y="97.24" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">82</text>
+  
+  
+    <text x="124.00" y="28.87" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">Gain</text>
+    <svg x="98.00" y="33.87" width="52" height="52.000" viewBox="0 0 52 52" opacity="1" overflow="visible"><path fill="none" stroke="#181818" d="M 43.45245161775065 32.771287361356976 A 18.72 18.72 0 0 1 35.64151276231622 42.046171869143535" stroke-width="3.12624"/><path fill="none" stroke="#03c3d5" d="M 16.92436390898857 42.37288091764949 A 18.72 18.72 0 1 1 44.61547132217464 27.975506885154644" stroke-width="3.12624"/><line stroke="#181818" stroke-linecap="round" x1="29.66711424708213" y1="26.75485700556282" x2="44.39974573473459" y2="29.78749502541145" stroke-width="2.9952"/></svg>
+    <text x="124.00" y="96.37" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">-6 dB</text>
+  
+  
+    <text x="204.00" y="28.87" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">Pan</text>
+    <svg x="178.00" y="33.87" width="52" height="52.000" viewBox="0 0 52 52" opacity="1" overflow="visible"><path fill="none" stroke="#181818" d="M 16.92436390898857 42.37288091764949 A 18.72 18.72 0 0 1 7.351709591125683 24.36303181879238 M 25.673290951494053 7.282851146672357 A 18.72 18.72 0 0 1 35.64151276231622 42.046171869143535" stroke-width="3.12624"/><path fill="none" stroke="#03c3d5" d="M 8.427405851564739 19.546912762531505 A 18.72 18.72 0 0 1 25.673290951494053 7.282851146672357" stroke-width="3.12624"/><line stroke="#181818" stroke-linecap="round" x1="22.37674127872282" y1="25.056849832376166" x2="7.820299365991758" y2="21.267744033947405" stroke-width="2.9952"/></svg>
+    <text x="204.00" y="96.37" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">-32</text>
+  
+  
+    <text x="275.00" y="37.30" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">live.dial</text>
+    <svg x="258.00" y="42.30" width="34" height="35.139" viewBox="0 -1.139068 34 35.139068" opacity="1" overflow="visible"><path d="M 12.8384 -1.139068 L 21.1616 -1.139068 L 17 3.022532 Z" fill="#03c3d5"/><path fill="none" stroke="#181818" d="M 14.066447641058875 5.116739901973409 A 12.24 12.24 0 0 1 23.304066036899066 27.491727760593854" stroke-width="2.04408"/><path fill="none" stroke="#03c3d5" d="M 11.065930248184834 27.705345215386206 A 12.24 12.24 0 0 1 11.063152805675745 6.296194817204293" stroke-width="2.04408"/><line stroke="#181818" stroke-linecap="round" x1="16.026176694825594" y1="14.754032019306775" x2="12.113841566287423" y2="5.730855656871748" stroke-width="1.9584"/></svg>
+    <text x="275.00" y="87.94" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">54</text>
+  
+  
+    <text x="332.00" y="50.73" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="1">live.dial</text>
+    <svg x="320.00" y="55.73" width="24" height="25.278" viewBox="0 -1.2776 24 25.2776" opacity="1" overflow="visible"><path d="M 9.0624 -1.2776 L 14.9376 -1.2776 L 12 1.66 Z" fill="#03c3d5"/><path fill="none" stroke="#181818" d="M 16.01325643385742 4.3486358865819215 A 8.64 8.64 0 0 1 20.64 11.999999999999998" stroke-width="2"/><path fill="none" stroke="#03c3d5" d="M 12 20.64 A 8.64 8.64 0 1 1 13.76025895202918 3.54121235508296" stroke-width="2"/><line stroke="#181818" stroke-linecap="round" x1="12.525844196733432" y1="10.353952649295358" x2="14.705297979722344" y2="3.531619821895676" stroke-width="1.5"/></svg>
+    <text x="333.44" y="79.49" text-anchor="start" font-size="9.5" fill="#b3b4bd" opacity="1">93</text>
+  
+  
+    <text x="398.00" y="28.87" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="0.45">Off</text>
+    <svg x="372.00" y="33.87" width="52" height="52.000" viewBox="0 0 52 52" opacity="0.45" overflow="visible"><path fill="none" stroke="#181818" d="M 18.59063445219808 8.808731804225555 A 18.72 18.72 0 0 1 35.64151276231622 42.046171869143535" stroke-width="3.12624"/><path fill="none" stroke="#03c3d5" d="M 16.92436390898857 42.37288091764949 A 18.72 18.72 0 0 1 14.355814010406224 11.34219209295783" stroke-width="3.12624"/><line stroke="#181818" stroke-linecap="round" x1="23.966916502756963" y1="22.856099954954352" x2="15.799003552583056" y2="10.225481523983467" stroke-width="2.9952"/></svg>
+    <text x="398.00" y="96.37" text-anchor="middle" font-size="9.5" fill="#b3b4bd" opacity="0.45">50</text>
+  
+</svg>

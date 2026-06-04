@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ableton-web-components — demo</title>
+    <link rel="stylesheet" href="/src/theme.css" />
+    <style>
+      body {
+        margin: 0;
+        background: var(--able-surface-area);
+        color: var(--able-text-color);
+        font-family: var(--able-font-family);
+        padding: 32px;
+      }
+      h1 { font-size: 14px; font-weight: 600; }
+      .panel {
+        display: inline-flex;
+        gap: 18px;
+        align-items: center;
+        padding: 16px;
+        background: var(--able-detail-view-background);
+        border: 1px solid var(--able-control-contrast-frame);
+        border-radius: var(--able-control-radius);
+      }
+      .readout { margin-top: 16px; font-variant-numeric: tabular-nums; }
+    </style>
+  </head>
+  <body>
+    <h1>able-dial</h1>
+    <div class="panel">
+      <able-dial id="d1" value="64" label="Attack"></able-dial>
+      <able-dial value="100" label="Decay"></able-dial>
+      <able-dial value="30" min="0" max="100" label="Mix" unit="%" decimals="0"></able-dial>
+      <able-dial value="-6" min="-70" max="6" default="0" label="Gain" unit="dB" decimals="1"></able-dial>
+      <able-dial value="0" min="-64" max="63" default="0" label="Pan" decimals="0" bipolar></able-dial>
+      <able-dial value="82" label="live.dial" decimals="0" triangle></able-dial>
+      <able-dial value="50" label="Off" disabled></able-dial>
+      <able-dial value="90" label="Orange" accent="var(--able-chosen-default)"></able-dial>
+    </div>
+
+    <h1 style="margin-top: 28px">able-dial — vertical (compact)</h1>
+    <div class="panel">
+      <able-dial type="vertical" value="54" label="live.dial" decimals="0" triangle></able-dial>
+      <able-dial type="vertical" value="0" label="live.dial" decimals="0"></able-dial>
+      <able-dial type="vertical" value="0" min="-64" max="63" default="0" label="Pan" decimals="0" bipolar></able-dial>
+    </div>
+
+    <h1 style="margin-top: 28px">able-dial — tiny (value in the ring gap)</h1>
+    <div class="panel">
+      <able-dial type="tiny" value="93" label="live.dial" decimals="0" triangle></able-dial>
+      <able-dial type="tiny" value="0" label="live.dial" decimals="0"></able-dial>
+      <able-dial type="tiny" value="0" min="-64" max="63" default="0" label="Pan" decimals="0" bipolar></able-dial>
+    </div>
+    <div class="readout">d1 value: <span id="out">64</span></div>
+
+    <script type="module">
+      import './src/index.ts';
+      const d1 = document.getElementById('d1');
+      const out = document.getElementById('out');
+      d1.addEventListener('input', (e) => (out.textContent = e.detail.value.toFixed(2)));
+    </script>
+  </body>
+</html>

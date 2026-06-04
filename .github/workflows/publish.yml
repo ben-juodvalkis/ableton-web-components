@@ -1,0 +1,36 @@
+name: Publish to npm
+
+# Publishes the package when you push a version tag, e.g.:
+#   npm version patch && git push --follow-tags
+# Requires repo secret NPM_TOKEN (an npm automation token).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # enables npm provenance
+
+# Run the bundled action JS on Node 24 (v4 actions still ship on Node 20,
+# which GitHub is deprecating). Clears the runner deprecation warning.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      # prepublishOnly runs the build; --provenance attaches a verifiable build attestation.
+      - run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
